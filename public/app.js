@@ -1,8 +1,3 @@
-
-
-
-
-
 function uçanFistik(x, y) {
     const fistik = document.createElement("div");
     fistik.textContent = "🥜";
@@ -55,3 +50,33 @@ function nextSlide() {
 
 // Her 5 saniyede bir geçiş
 setInterval(nextSlide, 5000);
+
+
+
+// Product
+function toggleFavorite(button) {
+  button.classList.toggle('active');
+}
+
+
+
+// Attention
+const slider = document.getElementById('slider');
+const totalSlides = slider.children.length;
+const counter = document.getElementById('counter');
+let currentIndex = 0;
+
+function updateSlider() {
+  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+  counter.textContent = `${currentIndex + 1} / ${totalSlides}`;
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % totalSlides;
+  updateSlider();
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+  updateSlider();
+}

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 :root {
   --bg: #ffffff;
   --text: #2B1E0F;
@@ -15,8 +18,49 @@
   box-sizing: border-box;
 }
 
+
+.peanut-button {
+  background-color: #f97316; /* Fıstık turuncusu */
+  color: #fff;
+  padding: 0.75em 1.5em;
+  border: none;
+  border-radius: 999px; /* Yuvarlak hatlar */
+  font-weight: 600;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.peanut-button::after {
+  position: absolute;
+  right: 1.2em;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  transition: right 0.3s ease;
+}
+
+.peanut-button:hover {
+  background-color: #ea580c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.peanut-button:hover::after {
+  right: 0.8em;
+}
+
+
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   background-color: var(--bg);
   color: var(--text);
   padding-top: 150px
@@ -36,7 +80,7 @@ header {
   left: 0;
   z-index: 1000;
   margin: 0 auto;
-justify-content: center;
+  justify-content: center;
 }
 
 .navbar-container {
@@ -55,7 +99,6 @@ justify-content: center;
 
 .logo-img {
   cursor: pointer;
-
   width: 55px;
   height: 55px;
   margin-right: 22px;
@@ -63,8 +106,7 @@ justify-content: center;
 
 .title {
   cursor: pointer;
-
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bold;
   color: var(--text);
 
@@ -80,7 +122,8 @@ justify-content: center;
 .nav-links a {
   text-decoration: none;
   color: var(--text);
-  font-weight: 500;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
   transition: color 0.3s;
 }
 
@@ -143,7 +186,6 @@ justify-content: center;
 
 h1 {
   font-size: 2.5rem;
-  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -152,19 +194,14 @@ p {
   margin-bottom: 20px;
   font-size: 1.1rem;
   color: #333;
+  font-weight: 300;
 }
 
 /* Bardaklar */
 .bardaklar {
   display: flex;
-  flex-direction: row;
-  /* MASAÜSTÜ: yatay */
-  justify-content: center;
-  align-items: flex-end;
   gap: 40px;
-  margin: 50px auto;
-  max-width: 90%;
-  flex-wrap: nowrap;
+justify-content: center;
 }
 
 .bardak-kutu {
@@ -193,6 +230,7 @@ p {
 
 .bardak-kutu .boyut {
   font-size: 1rem;
+  font-weight: 300;
   font-style: italic;
   color: #555;
   margin-top: 4px;
@@ -257,33 +295,6 @@ p {
 
 
 
-
-
-input,
-select,
-button {
-  padding: 12px;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-button {
-  background-color: var(--accent);
-  color: var(--text);
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #ffb347;
-}
-
-
-
-
 /* Fıstık Uçuşu */
 .fistik-anim {
   position: fixed;
@@ -306,46 +317,6 @@ button:hover {
   }
 }
 
-
-
-
-
-.lider-tablosu {
-  margin-top: 40px;
-  background: var(--white);
-  padding: 20px;
-  border-radius: var(--radius);
-  box-shadow: 0 3px 10px var(--shadow);
-}
-
-.lider-tablosu h2 {
-  margin-bottom: 15px;
-  text-align: center;
-  font-size: 1.5rem;
-  color: var(--text);
-}
-
-.lider-tablosu table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
-}
-
-.lider-tablosu th,
-.lider-tablosu td {
-  padding: 12px;
-  border-bottom: 1px solid #eee;
-}
-
-.lider-tablosu th {
-  background-color: var(--light);
-}
-
-.lider-tablosu img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
 
 
 /* Liste */
@@ -371,6 +342,141 @@ button:hover {
   border-radius: 50%;
 }
 
+
+
+/* Attention */
+.campaign-banner {
+  width: 70%;
+  margin: 40px auto;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.campaign-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.campaign-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.campaign-content h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.campaign-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.campaign-button {
+  padding: 12px 24px;
+  background-color: #ff4747;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.campaign-button:hover {
+  background-color: #e93b3b;
+}
+
+
+
+
+
+/* Product */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 80px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  width: 280px;
+  /* artırıldı */
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+.product-image {
+  width: 100%;
+  height: 220px;
+  /* artırıldı */
+  object-fit: cover;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  font-size: 20px;
+  color: gray;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-btn.active {
+  color: red;
+}
+
+.product-info {
+  padding: 18px;
+  /* genişletildi */
+}
+
+.product-name {
+  font-weight: bold;
+  font-size: 17px;
+  margin: 0 0 10px;
+}
+
+.product-price {
+  color: #27ae60;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.product-rating {
+  font-size: 14px;
+  color: #666;
+}
+
+.stars {
+  color: gold;
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
   h1 {
@@ -387,7 +493,4 @@ button:hover {
   }
 }
 
-@media (max-width:1024px) {
-
-
-}
+@media (max-width:1024px) {}
