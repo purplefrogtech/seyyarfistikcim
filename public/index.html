@@ -22,33 +22,82 @@
   <header class="navbar">
     <div class="navbar-container">
       <div class="logo">
-
-        <img class="logo-img" src="../images/logo.png" alt="">
+        <img class="logo-img" src="../images/logo.png" alt="Seyyar Fıstıkçım logo">
         <h1 class="title">Seyyar Fıstıkçım</h1>
-
       </div>
+
       <nav class="nav-links">
         <a href="#anasayfa">Anasayfa</a>
         <a href="#iletisim">İletişim</a>
-        <button class="peanut-button">
-          <a href="#giris">Giriş Yap / Kayıt Ol</a>
-        </button>
+      </nav>
 
+      <button class="hamburger" id="hamburger">☰</button>
+      <nav class="mobile-menu" id="mobileMenu">
+        <a href="#anasayfa">Anasayfa</a>
+        <a href="#iletisim">İletişim</a>
       </nav>
     </div>
+
+    <!-- Buton ve mobil menü zaten bu şekilde -->
+
   </header>
+
 
   <section class="slider">
     <div class="slider-container">
-      <img class="slide active" src="../images/slider.jpg" alt="Slider 1">
-      <img class="slide" src="../images/slider2.jpg" alt="Slider 2">
-      <img class="slide" src="../images/slider3.jpg" alt="Slider 3">
-      <img class="slide" src="../images/slider4.jpg" alt="Slider 4">
-      <img class="slide" src="../images/slider5.jpg" alt="Slider 5">
-      <img class="slide" src="../images/slider6.jpg" alt="Slider 6">
-      <img class="slide" src="../images/slider7.jpg" alt="Slider 7">
-      <img class="slide" src="../images/slider8.jpg" alt="Slider 8">
-      <img class="slide" src="../images/slider9.jpg" alt="Slider 9">
+      <picture>
+        <source media="(max-width: 460px)" srcset="../images/sliderv.jpg">
+        <source media="(max-width: 1120px)" srcset="../images/sliderq.jpg">
+        <img class="slide active" src="../images/slider.jpg" alt="Slider 1">
+      </picture>
+
+      <picture>
+        <source media="(max-width: 460px)" srcset="../images/sliderv2.jpg">
+        <source media="(max-width: 1120px)" srcset="../images/sliderq2.jpg">
+        <img class="slide" src="../images/slider2.jpg" alt="Slider 2">
+      </picture>
+
+      <picture>
+        <source media="(max-width: 460px)" srcset="../images/sliderv3.jpg">
+        <source media="(max-width: 1120px)" srcset="../images/sliderq3.jpg">
+        <img class="slide" src="../images/slider3.jpg" alt="Slider 3">
+      </picture>
+
+      <picture>
+        <source media="(max-width: 460px)" srcset="../images/sliderv4.jpg">
+        <source media="(max-width: 1120px)" srcset="../images/sliderq4.jpg">
+        <img class="slide" src="../images/slider4.jpg" alt="Slider 4">
+      </picture>
+
+      <picture>
+        <source media="(max-width: 460px)" srcset="../images/sliderv5.jpg">
+        <source media="(max-width: 1120px)" srcset="../images/sliderq5.jpg">
+        <img class="slide" src="../images/slider5.jpg" alt="Slider 5">
+      </picture>
+
+      <picture>
+        <source media="(max-width: 460px)" srcset="../images/sliderv6.jpg">
+        <source media="(max-width: 1120px)" srcset="../images/sliderq6.jpg">
+        <img class="slide" src="../images/slider6.jpg" alt="Slider 6">
+      </picture>
+
+      <picture>
+        <source media="(max-width: 460px)" srcset="../images/sliderv7.jpg">
+        <source media="(max-width: 1120px)" srcset="../images/sliderq7.jpg">
+        <img class="slide" src="../images/slider7.jpg" alt="Slider 7">
+      </picture>
+
+      <picture>
+        <source media="(max-width: 460px)" srcset="../images/sliderv8.jpg">
+        <source media="(max-width: 1120px)" srcset="../images/sliderq8.jpg">
+        <img class="slide" src="../images/slider8.jpg" alt="Slider 8">
+      </picture>
+
+      <picture>
+        <source media="(max-width: 460px)" srcset="../images/sliderv9.jpg">
+        <source media="(max-width: 1120px)" srcset="../images/sliderq9.jpg">
+        <img class="slide" src="../images/slider9.jpg" alt="Slider 9">
+      </picture>
     </div>
   </section>
 
@@ -162,100 +211,100 @@
   </div>
 
 
-    <!-- B2B Product Section -->
-    <h1>Seyyar Fıstıkçım</h1>
-    <p>İnsanlar birbirine yer fıstığı ikram ediyor. Gerçekten.</p>
-  
-    <div class="product-grid">
-  
-      <div class="product-card">
-        <img src="../images/5.png" class="product-image" alt="Ürün Görseli">
-        <button class="favorite-btn" onclick="toggleFavorite(this)">♥</button>
-        <div class="product-info">
-          <p class="product-name">Ürün Adı 1</p>
-          <p class="product-price">₺199,99</p>
-          <p class="product-rating">
-            <span class="stars">★★★★☆</span> (24 yorum)
-          </p>
-        </div>
-      </div>
-  
-      <div class="product-card">
-        <img src="../images/6.png" class="product-image" alt="Ürün Görseli">
-        <button class="favorite-btn" onclick="toggleFavorite(this)">♥</button>
-        <div class="product-info">
-          <p class="product-name">Ürün Adı 2</p>
-          <p class="product-price">₺149,99</p>
-          <p class="product-rating">
-            <span class="stars">★★★☆☆</span> (10 yorum)
-          </p>
-        </div>
-      </div>
-  
-      <div class="product-card">
-        <img src="../images/7.png" class="product-image" alt="Ürün Görseli">
-        <button class="favorite-btn" onclick="toggleFavorite(this)">♥</button>
-        <div class="product-info">
-          <p class="product-name">Ürün Adı 2</p>
-          <p class="product-price">₺149,99</p>
-          <p class="product-rating">
-            <span class="stars">★★★☆☆</span> (10 yorum)
-          </p>
-        </div>
-      </div>
+  <!-- B2B Product Section -->
+  <h1>Seyyar Fıstıkçım</h1>
+  <p>İnsanlar birbirine yer fıstığı ikram ediyor. Gerçekten.</p>
 
-      <div class="product-card">
-        <img src="../images/8.png" class="product-image" alt="Ürün Görseli">
-        <button class="favorite-btn" onclick="toggleFavorite(this)">♥</button>
-        <div class="product-info">
-          <p class="product-name">Ürün Adı 2</p>
-          <p class="product-price">₺149,99</p>
-          <p class="product-rating">
-            <span class="stars">★★★☆☆</span> (10 yorum)
-          </p>
-        </div>
-      </div>
+  <div class="product-grid">
 
-      <div class="product-card">
-        <img src="../images/9.png" class="product-image" alt="Ürün Görseli">
-        <button class="favorite-btn" onclick="toggleFavorite(this)">♥</button>
-        <div class="product-info">
-          <p class="product-name">Ürün Adı 2</p>
-          <p class="product-price">₺149,99</p>
-          <p class="product-rating">
-            <span class="stars">★★★☆☆</span> (10 yorum)
-          </p>
-        </div>
+    <div class="product-card">
+      <img src="../images/5.png" class="product-image" alt="Ürün Görseli">
+      <button class="favorite-btn" onclick="toggleFavorite(this)">♥</button>
+      <div class="product-info">
+        <p class="product-name">Ürün Adı 1</p>
+        <p class="product-price">₺199,99</p>
+        <p class="product-rating">
+          <span class="stars">★★★★☆</span> (24 yorum)
+        </p>
       </div>
-  
-
-      <div class="product-card">
-        <img src="../images/10.png" class="product-image" alt="Ürün Görseli">
-        <button class="favorite-btn" onclick="toggleFavorite(this)">♥</button>
-        <div class="product-info">
-          <p class="product-name">Ürün Adı 2</p>
-          <p class="product-price">₺149,99</p>
-          <p class="product-rating">
-            <span class="stars">★★★☆☆</span> (10 yorum)
-          </p>
-        </div>
-      </div>
-
-
-      <div class="product-card">
-        <img src="../images/11.png" class="product-image" alt="Ürün Görseli">
-        <button class="favorite-btn" onclick="toggleFavorite(this)">♥</button>
-        <div class="product-info">
-          <p class="product-name">Ürün Adı 2</p>
-          <p class="product-price">₺149,99</p>
-          <p class="product-rating">
-            <span class="stars">★★★☆☆</span> (10 yorum)
-          </p>
-        </div>
-      </div>
-      <!-- END DIV -->
-  
     </div>
+
+    <div class="product-card">
+      <img src="../images/6.png" class="product-image" alt="Ürün Görseli">
+      <button class="favorite-btn" onclick="toggleFavorite(this)">♥</button>
+      <div class="product-info">
+        <p class="product-name">Ürün Adı 2</p>
+        <p class="product-price">₺149,99</p>
+        <p class="product-rating">
+          <span class="stars">★★★☆☆</span> (10 yorum)
+        </p>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/7.png" class="product-image" alt="Ürün Görseli">
+      <button class="favorite-btn" onclick="toggleFavorite(this)">♥</button>
+      <div class="product-info">
+        <p class="product-name">Ürün Adı 2</p>
+        <p class="product-price">₺149,99</p>
+        <p class="product-rating">
+          <span class="stars">★★★☆☆</span> (10 yorum)
+        </p>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/8.png" class="product-image" alt="Ürün Görseli">
+      <button class="favorite-btn" onclick="toggleFavorite(this)">♥</button>
+      <div class="product-info">
+        <p class="product-name">Ürün Adı 2</p>
+        <p class="product-price">₺149,99</p>
+        <p class="product-rating">
+          <span class="stars">★★★☆☆</span> (10 yorum)
+        </p>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/9.png" class="product-image" alt="Ürün Görseli">
+      <button class="favorite-btn" onclick="toggleFavorite(this)">♥</button>
+      <div class="product-info">
+        <p class="product-name">Ürün Adı 2</p>
+        <p class="product-price">₺149,99</p>
+        <p class="product-rating">
+          <span class="stars">★★★☆☆</span> (10 yorum)
+        </p>
+      </div>
+    </div>
+
+
+    <div class="product-card">
+      <img src="../images/10.png" class="product-image" alt="Ürün Görseli">
+      <button class="favorite-btn" onclick="toggleFavorite(this)">♥</button>
+      <div class="product-info">
+        <p class="product-name">Ürün Adı 2</p>
+        <p class="product-price">₺149,99</p>
+        <p class="product-rating">
+          <span class="stars">★★★☆☆</span> (10 yorum)
+        </p>
+      </div>
+    </div>
+
+
+    <div class="product-card">
+      <img src="../images/11.png" class="product-image" alt="Ürün Görseli">
+      <button class="favorite-btn" onclick="toggleFavorite(this)">♥</button>
+      <div class="product-info">
+        <p class="product-name">Ürün Adı 2</p>
+        <p class="product-price">₺149,99</p>
+        <p class="product-rating">
+          <span class="stars">★★★☆☆</span> (10 yorum)
+        </p>
+      </div>
+    </div>
+    <!-- END DIV -->
+
+  </div>
 
 
   <script src="app.js"></script>

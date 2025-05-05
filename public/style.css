@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   --bg: #ffffff;
-  --text: #2B1E0F;
-  --light: #D9BFA3;
+  --text: #2b1e0f;
+  --light: #d9bfa3;
   --nuts: #ffa580;
   --white: #ffffff;
-  --accent: #FFC857;
+  --accent: #ffc857;
   --shadow: rgba(0, 0, 0, 0.1);
   --radius: 12px;
 }
@@ -19,40 +18,10 @@
 }
 
 
-.peanut-button {
-  background-color: #f97316; /* Fıstık turuncusu */
-  color: #fff;
-  padding: 0.75em 1.5em;
-  border: none;
-  border-radius: 999px; /* Yuvarlak hatlar */
-  font-weight: 600;
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.peanut-button::after {
-  position: absolute;
-  right: 1.2em;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.1rem;
-  transition: right 0.3s ease;
-}
-
-.peanut-button:hover {
-  background-color: #ea580c;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-}
-
-.peanut-button:hover::after {
-  right: 0.8em;
+body,
+html {
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -63,30 +32,25 @@ body {
   font-style: normal;
   background-color: var(--bg);
   color: var(--text);
-  padding-top: 150px
+  padding-top: 150px;
 }
 
-header {
-  width: 100%;
-  overflow: hidden;
-}
 
-.navbar {
+
+header.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   background-color: var(--white);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  position: absolute;
-  top: 0;
-  left: 0;
   z-index: 1000;
-  margin: 0 auto;
-  justify-content: center;
 }
 
 .navbar-container {
   max-width: 1200px;
   margin: auto;
-  padding: 38px 0px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -98,39 +62,92 @@ header {
 }
 
 .logo-img {
-  cursor: pointer;
-  width: 55px;
-  height: 55px;
-  margin-right: 22px;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
 }
 
 .title {
-  cursor: pointer;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: var(--text);
-
-
 }
 
 .nav-links {
   display: flex;
   gap: 20px;
-  align-items: center;
 }
 
 .nav-links a {
   text-decoration: none;
   color: var(--text);
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
-  transition: color 0.3s;
+  font-weight: 400;
 }
 
 .nav-links a:hover {
   color: var(--accent);
-  /* örn: #FFC857 */
 }
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobil menü */
+.mobile-menu {
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--white);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-menu a:hover {
+  color: var(--accent);
+}
+
+/* Açılınca aktif hale gelir */
+.mobile-menu.active {
+  pointer-events: auto;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger:hover+.mobile-menu {
+    pointer-events: auto;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 
 .slider {
@@ -142,7 +159,6 @@ header {
   /* Ortalar */
   border-radius: 10px;
 }
-
 
 .slider-container {
   position: relative;
@@ -166,7 +182,6 @@ header {
   opacity: 1;
   z-index: 2;
 }
-
 
 @keyframes slide {
   0% {
@@ -201,7 +216,7 @@ p {
 .bardaklar {
   display: flex;
   gap: 40px;
-justify-content: center;
+  justify-content: center;
 }
 
 .bardak-kutu {
@@ -216,7 +231,9 @@ justify-content: center;
   justify-content: space-evenly;
   text-align: center;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   padding: 16px;
 }
 
@@ -226,7 +243,6 @@ justify-content: center;
   object-fit: contain;
   border-radius: 7px;
 }
-
 
 .bardak-kutu .boyut {
   font-size: 1rem;
@@ -272,29 +288,6 @@ justify-content: center;
   }
 }
 
-
-/* 🔁 MOBİL: yukarıdan aşağı */
-@media (max-width: 768px) {
-  .bardaklar {
-    flex-direction: column;
-    /* MOBİL: dikey */
-    align-items: center;
-    gap: 20px;
-  }
-
-  .bardak-kutu {
-    width: 220px;
-    height: 220px;
-  }
-
-  .bardak-kutu img {
-    width: 160px;
-    height: 160px;
-  }
-}
-
-
-
 /* Fıstık Uçuşu */
 .fistik-anim {
   position: fixed;
@@ -316,8 +309,6 @@ justify-content: center;
     transform: translate(-50%, -150px) rotate(360deg);
   }
 }
-
-
 
 /* Liste */
 #fistikListesi {
@@ -341,8 +332,6 @@ justify-content: center;
   height: 40px;
   border-radius: 50%;
 }
-
-
 
 /* Attention */
 .campaign-banner {
@@ -394,10 +383,6 @@ justify-content: center;
 .campaign-button:hover {
   background-color: #e93b3b;
 }
-
-
-
-
 
 /* Product */
 .product-grid {
@@ -476,7 +461,6 @@ justify-content: center;
   color: gold;
 }
 
-
 /* Responsive */
 @media (max-width: 768px) {
   h1 {
@@ -493,4 +477,54 @@ justify-content: center;
   }
 }
 
-@media (max-width:1024px) {}
+@media (max-width: 1024px) {
+  .bardak-kutu {
+    width: 220px;
+    height: 220px;
+  }
+
+  .bardak-kutu img {
+    width: 170px;
+    height: 170px;
+  }
+
+  .peanut-button {
+    font-size: 0.9rem;
+  }
+
+
+  .navbar-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+
+}
+
+
+@media (max-width: 768px) {
+  .bardak-kutu {
+    width: 320px;
+    height: 320px;
+  }
+
+  .bardak-kutu img {
+    width: 270px;
+    height: 270px;
+  }
+
+  .peanut-button {
+    font-size: 0.9rem;
+  }
+
+
+  .navbar-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+}
